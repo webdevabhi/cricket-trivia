@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { fetchQuestions } from "../../store/actions/index";
 
+import BarChart from "../../components/BarChart";
+
 class Home extends Component {
     componentDidMount() {
         this.props.fetchQuestions();
@@ -13,11 +15,19 @@ class Home extends Component {
             console.log(this.props.questions);
         }
         return (
-            <div>
-                <p>Hi User, I am home Component</p>
-                <ul>
-                    {form}
-                </ul>
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-6">
+                        <p>Hi User, I am home Component</p>
+                        <ul>
+                            {form}
+                        </ul>
+                    </div>
+                    <div className="col-md-6">
+                        <BarChart />
+                    </div>
+                </div>
+                
             </div>
         );
     }
