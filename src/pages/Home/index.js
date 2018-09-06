@@ -12,16 +12,32 @@ class Home extends Component {
     render() {
         let form = <li>No Questions</li>;
         if(this.props.questions && this.props.questions.length) {
-            console.log(this.props.questions);
+            form = this.props.questions.map((ques, idx) => {
+                return (
+                    <div key={idx} className="form-group">
+                        <label>{ques.q}</label>
+                        <select className="form-control">
+                            <option value="">Select One</option>
+                            {
+                                Object.keys(ques.options).map((key, idx) => {
+                                    return (
+                                        <option key={idx} value={key}>{ques.options[key]}</option>
+                                    )
+                                })
+                            }
+                        </select>
+                    </div>
+                )
+            })
         }
         return (
             <div className="container">
                 <div className="row">
                     <div className="col-md-6">
                         <p>Hi User, I am home Component</p>
-                        <ul>
+                        <form>
                             {form}
-                        </ul>
+                        </form>
                     </div>
                     <div className="col-md-6">
                         <BarChart />
