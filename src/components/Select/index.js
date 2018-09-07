@@ -5,7 +5,7 @@ const select = (props) => {
     return (
         <div className="form-group">
             <label>{props.ques.q}</label>
-            <select className="form-control">
+            <select className="form-control" onChange={(e) => props.changed(e, props.id)}>
                 <option value="">Select One</option>
                 {
                     Object.keys(props.ques.options).map((key, idx) => {

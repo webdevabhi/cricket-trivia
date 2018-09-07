@@ -13,7 +13,7 @@ const barChart = () => {
             borderWidth: 1,
             hoverBackgroundColor: 'rgba(0,0,10,0.7)',
             hoverBorderColor: 'rgba(0,0,0,1)',
-            data: [3, 7]
+            data: [1, 3]
           }
         ]
     };
@@ -27,7 +27,7 @@ const barChart = () => {
             yAxes: [{
                 ticks: {
                     beginAtZero: true,
-                    suggestedMax: 10
+                    suggestedMax: 4
                 }
             }]
         },
