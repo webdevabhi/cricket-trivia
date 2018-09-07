@@ -1,3 +1,4 @@
 export {
-    fetchQuestions
+    fetchQuestions,
+    submitForm
 } from "./questioner";

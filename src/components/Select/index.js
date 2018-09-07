@@ -10,7 +10,7 @@ const select = (props) => {
 
     return (
         <div className={classes.join(' ')}>
-            <label>{props.ques.q}</label>
+            <label>{props.ques.Q}</label>
             <select className="form-control" onChange={props.changed} required={props.required} >
                 <option value="">Select One</option>
                 {

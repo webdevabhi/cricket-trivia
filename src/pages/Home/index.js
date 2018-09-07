@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { fetchQuestions } from "../../store/actions/index";
+import { fetchQuestions, submitForm } from "../../store/actions/index";
 
 import BarChart from "../../components/BarChart";
 import Select from "../../components/Select";
@@ -31,8 +31,7 @@ class Home extends Component {
 
     submitForm(e) {
         e.preventDefault();
-        console.log(this.state.ansData);
-        // this.props.submitForm(this.state.ansData);
+        this.props.submitForm(this.state.ansData);
     }
 
     clearForm(e) {
@@ -86,7 +85,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
     return {
         fetchQuestions: () => dispatch(fetchQuestions()),
-        // submitForm: (data) => dispatch(submitForm(data))
+        submitForm: (data) => dispatch(submitForm(data))
     };
 };
 
