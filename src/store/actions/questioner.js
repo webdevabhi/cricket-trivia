@@ -18,6 +18,8 @@ export const fetchQuestions = () => {
 };
 
 export const evaluateResult = (ansData) => {
+  let total = questFile.questions.length;
+  let correct = 0;
   const result = Object.keys(ansData).map((key) => {
     if(ansData[key].Q === questFile.questions[key].Q){
       let tmpResults = {
@@ -25,6 +27,7 @@ export const evaluateResult = (ansData) => {
         ansSelected: ansData[key].ansSelected
       };
       if(ansData[key].ansSelected === questFile.questions[key].A) {
+        correct++;
         tmpResults.incorrect = false;
       } else {
         tmpResults.incorrect = true;
@@ -35,7 +38,9 @@ export const evaluateResult = (ansData) => {
 
   return {
     type: actionTypes.EVALUATE_RESULT,
-    result: result
+    result: result,
+    correct: correct,
+    incorrect: total-correct
   }
 }
 

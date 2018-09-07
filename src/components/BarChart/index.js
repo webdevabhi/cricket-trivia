@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Bar } from 'react-chartjs-2';
 
-const barChart = () => {
-    const data = {
+const barChart = (props) => {
+    /* const data = {
         labels: ['Correct', 'Incorrect'],
         datasets: [
           {
@@ -16,7 +16,7 @@ const barChart = () => {
             data: [1, 3]
           }
         ]
-    };
+    }; */
 
     const options = {
         responsive: true,
@@ -36,7 +36,7 @@ const barChart = () => {
 
     return (
         <div>
-            <Bar data={data} options={options} height={300} />
+            <Bar data={props.data} options={options} height={300} />
         </div>
     );
 };

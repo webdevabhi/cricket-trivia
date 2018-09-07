@@ -49,6 +49,20 @@ class Home extends Component {
                 )
             })
         }
+        const data = {
+            labels: ['Correct', 'Incorrect'],
+            datasets: [
+              {
+                label: 'Result',
+                backgroundColor: 'rgba(0,0,0,0.2)',
+                borderColor: 'rgba(0,0,0,1)',
+                borderWidth: 1,
+                hoverBackgroundColor: 'rgba(0,0,10,0.7)',
+                hoverBorderColor: 'rgba(0,0,0,1)',
+                data: [this.props.correct, this.props.incorrect]
+              }
+            ]
+        };
         return (
             <div className="container">
                 <div className="row">
@@ -67,7 +81,7 @@ class Home extends Component {
                         </form>
                     </div>
                     <div className="col-md-6">
-                        <BarChart />
+                        <BarChart data={data} />
                     </div>
                 </div>
                 
@@ -78,7 +92,9 @@ class Home extends Component {
 
 const mapStateToProps = (state) => {
     return { 
-        questions: state.quizData.questions
+        questions: state.quizData.questions,
+        correct: state.quizData.correct,
+        incorrect: state.quizData.incorrect,
     };
 };
 

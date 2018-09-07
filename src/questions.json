@@ -1,7 +1,7 @@
 {
     "questions" : [
         {
-            "Q" : "When was the last time India won the Cricket World Cup ?",
+            "Q" : "When was the first time India won the Cricket World Cup ?",
             "A" : "b",
             "options" : {
                 "a" : "1992",
@@ -11,7 +11,7 @@
             }
         }, {
             "Q" : "What is the highest individual score by a batsman in Test Cricket ?",
-            "A" : "d",
+            "A" : "c",
             "options" : {
                 "a" : "300",
                 "b" : "372",

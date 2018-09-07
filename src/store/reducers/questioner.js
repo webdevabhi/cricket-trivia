@@ -3,7 +3,9 @@ import { updateObject } from "../../utility/utility";
 
 const initialState = {
     questions: [],
-    loading: false
+    loading: false,
+    correct: 0,
+    incorrect: 0
 };
 
 export default (state = initialState, action) => {
@@ -13,7 +15,7 @@ export default (state = initialState, action) => {
 
         case actionTypes.EVALUATE_RESULT:
             console.log(action.result);
-            return updateObject(state, { questions: action.result });
+            return updateObject(state, { questions: action.result, correct: action.correct, incorrect: action.incorrect });
     
         default:
             return state;
