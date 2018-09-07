@@ -56,12 +56,24 @@ class Home extends Component {
             labels: ['Correct', 'Incorrect'],
             datasets: [
               {
-                label: 'Result',
-                backgroundColor: 'rgba(0,0,0,0.2)',
-                borderColor: 'rgba(0,0,0,1)',
+                label: ["Corect", "Incorrect"],
+                backgroundColor: [
+                    'rgba(2, 117, 5, 0.3)',
+                    'rgba(255, 0, 0, 0.3)',
+                ],
+                borderColor: [
+                    'rgba(2, 117, 5, 1)',
+                    'rgba(255, 0, 0, 1)',
+                ],
                 borderWidth: 1,
-                hoverBackgroundColor: 'rgba(0,0,10,0.7)',
-                hoverBorderColor: 'rgba(0,0,0,1)',
+                hoverBackgroundColor: [
+                    'rgba(2, 117, 5, 0.6)',
+                    'rgba(255, 0, 0, 0.6)',
+                ],
+                hoverBorderColor: [
+                    'rgba(2, 117, 5, 0.3)',
+                    'rgba(255, 0, 0, 1)',
+                ],
                 data: [this.props.correct, this.props.incorrect]
               }
             ]
@@ -78,7 +90,7 @@ class Home extends Component {
                                     <Button className="btn btn-default btn-block" type="submit" disabled={this.state.disableSubmitBtn}>Submit</Button>
                                 </div>
                                 <div className="col-xs-6 col-md-6">
-                                    <Button className="btn btn-default btn-block" onClick={this.clearForm.bind(this)}>Reset</Button>
+                                    <Button className="btn btn-default btn-block" onClick={this.clearForm.bind(this)}>Clear</Button>
                                 </div>
                             </div>
                         </form>

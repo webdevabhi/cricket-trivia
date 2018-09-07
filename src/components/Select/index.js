@@ -12,7 +12,7 @@ const select = (props) => {
         <div className={classes.join(' ')}>
             <label>{props.ques.Q}</label>
             <select className="form-control" onChange={props.changed} required={props.required} >
-                <option value="">Select One</option>
+                <option value="">Select one</option>
                 {
                     Object.keys(props.ques.options).map((key, idx) => {
                         return (

@@ -3,20 +3,6 @@ import React from 'react';
 import { Bar } from 'react-chartjs-2';
 
 const barChart = (props) => {
-    /* const data = {
-        labels: ['Correct', 'Incorrect'],
-        datasets: [
-          {
-            label: 'Result',
-            backgroundColor: 'rgba(0,0,0,0.2)',
-            borderColor: 'rgba(0,0,0,1)',
-            borderWidth: 1,
-            hoverBackgroundColor: 'rgba(0,0,10,0.7)',
-            hoverBorderColor: 'rgba(0,0,0,1)',
-            data: [1, 3]
-          }
-        ]
-    }; */
 
     const options = {
         responsive: true,
@@ -27,9 +13,20 @@ const barChart = (props) => {
             yAxes: [{
                 ticks: {
                     beginAtZero: true,
+                    fixedStepSize: 1,
                     suggestedMax: 4
                 }
+            }],
+            xAxes: [{
+                ticks: {
+                    fontColor:['rgba(44,44,44,0.8)','rgba(44,44,44,0.8)']
+                }
             }]
+        },
+        title: {
+            display: true,
+            text: 'Result',
+            fontSize: 25,
         },
         maintainAspectRatio: true
     }
