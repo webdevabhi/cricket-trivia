@@ -20,6 +20,7 @@ export const fetchQuestions = () => {
 export const evaluateResult = (ansData) => {
   let total = questFile.questions.length;
   let correct = 0;
+
   const result = Object.keys(ansData).map((key) => {
     if(ansData[key].Q === questFile.questions[key].Q){
       let tmpResults = {
@@ -34,6 +35,8 @@ export const evaluateResult = (ansData) => {
       }
       return tmpResults;
     }
+
+    return {};
   });
 
   return {
@@ -41,7 +44,7 @@ export const evaluateResult = (ansData) => {
     result: result,
     correct: correct,
     incorrect: total-correct
-  }
+  };
 }
 
 export const submitForm = (data) => {

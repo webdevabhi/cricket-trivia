@@ -9,7 +9,8 @@ import Button from "../../components/Button";
 class Home extends Component {
 
     state={
-        ansData: []
+        ansData: [],
+        disableSubmitBtn: false
     };
 
     componentDidMount() {
@@ -31,13 +32,15 @@ class Home extends Component {
 
     submitForm(e) {
         e.preventDefault();
+        this.setState({disableSubmitBtn: true});
         this.props.submitForm(this.state.ansData);
     }
 
     clearForm(e) {
         e.preventDefault();
-
-        console.log("Clear Form");
+        this.props.fetchQuestions();
+        document.getElementById("quizForm").reset();
+        this.setState({disableSubmitBtn: false});
     }
 
     render() {
@@ -49,7 +52,7 @@ class Home extends Component {
                 )
             })
         }
-        const data = {
+        const graphData = {
             labels: ['Correct', 'Incorrect'],
             datasets: [
               {
@@ -67,21 +70,21 @@ class Home extends Component {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6">
-                        <form onSubmit={(e) => this.submitForm(e)}>
+                        <form id="quizForm" onSubmit={(e) => this.submitForm(e)}>
                             {form}
 
                             <div className="row">
                                 <div className="col-xs-6 col-md-6">
-                                    <Button className="btn btn-default btn-block" type="submit">Submit</Button>
+                                    <Button className="btn btn-default btn-block" type="submit" disabled={this.state.disableSubmitBtn}>Submit</Button>
                                 </div>
                                 <div className="col-xs-6 col-md-6">
-                                    <Button className="btn btn-default btn-block" onClick={this.clearForm.bind(this)}>Clear</Button>
+                                    <Button className="btn btn-default btn-block" onClick={this.clearForm.bind(this)}>Reset</Button>
                                 </div>
                             </div>
                         </form>
                     </div>
                     <div className="col-md-6">
-                        <BarChart data={data} />
+                        <BarChart data={graphData} />
                     </div>
                 </div>
                 
