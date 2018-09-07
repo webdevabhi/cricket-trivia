@@ -21,3 +21,11 @@
     width: 50%;
     margin-left: 10px;
 }
+
+.error.form-group {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.error.form-group label {
+    background-color: rgba(255, 0, 0, 0.5);
+}

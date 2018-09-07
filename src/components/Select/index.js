@@ -2,10 +2,16 @@ import React from 'react';
 import "./select.css";
 
 const select = (props) => {
+
+    let classes = ['form-group'];
+    if(props.ques.incorrect) {
+        classes.push('error');
+    }
+
     return (
-        <div className="form-group">
+        <div className={classes.join(' ')}>
             <label>{props.ques.q}</label>
-            <select className="form-control" onChange={(e) => props.changed(e, props.id)}>
+            <select className="form-control" onChange={props.changed} required={props.required} >
                 <option value="">Select One</option>
                 {
                     Object.keys(props.ques.options).map((key, idx) => {
