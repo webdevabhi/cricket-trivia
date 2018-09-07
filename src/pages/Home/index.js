@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { fetchQuestions } from "../../store/actions/index";
 
 import BarChart from "../../components/BarChart";
+import Select from "../../components/Select";
 
 class Home extends Component {
     componentDidMount() {
@@ -14,19 +15,7 @@ class Home extends Component {
         if(this.props.questions && this.props.questions.length) {
             form = this.props.questions.map((ques, idx) => {
                 return (
-                    <div key={idx} className="form-group">
-                        <label>{ques.q}</label>
-                        <select className="form-control">
-                            <option value="">Select One</option>
-                            {
-                                Object.keys(ques.options).map((key, idx) => {
-                                    return (
-                                        <option key={idx} value={key}>{ques.options[key]}</option>
-                                    )
-                                })
-                            }
-                        </select>
-                    </div>
+                    <Select key={idx} ques={ques} />
                 )
             })
         }
@@ -34,7 +23,6 @@ class Home extends Component {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6">
-                        <p>Hi User, I am home Component</p>
                         <form>
                             {form}
                         </form>

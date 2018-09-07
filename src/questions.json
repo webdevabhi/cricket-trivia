@@ -19,43 +19,7 @@
                 "d" : "263"
             }
         }, {
-            "Q" : "Who is the only Indian bowler to take 10 wickets in an innings ?",
-            "A" : "a",
-            "options" : {
-                "a" : "Anil Kumble",
-                "b" : "Zaheer Khan",
-                "c" : "Irfan Pathan",
-                "d" : "Brett Lee"
-            }
-        }, {
-            "Q" : "Who took the catch of Misbah-ul-Haq in the 2007 T20 WC final ?",
-            "A" : "c",
-            "options" : {
-                "a" : "RP Singh",
-                "b" : "S Sreesanth",
-                "c" : "M S Dhoni",
-                "d" : "Yuvraj Singh"
-            }
-        }, {
-            "Q" : "How many wickets did Rajkot player Pravin Tambe take on IPL debut ?",
-            "A" : "c",
-            "options" : {
-                "a" : "2",
-                "b" : "4",
-                "c" : "0",
-                "d" : "3"
-            }
-        }, {
-            "Q" : "Which of these players doesn't have a T20I century ?",
-            "A" : "d",
-            "options" : {
-                "a" : "Suresh Raina",
-                "b" : "Brendon McCullum",
-                "c" : "K L Rahul",
-                "d" : "James Faulkner"
-            }
-        }, {
-            "Q" : "Who has wont the most number of Cricket World Cups ?",
+            "Q" : "Who has won the most number of Cricket World Cups ?",
             "A" : "a",
             "options" : {
                 "a" : "Australia",
@@ -71,24 +35,6 @@
                 "b" : "47",
                 "c" : "49",
                 "d" : "48"
-            }
-        }, {
-            "Q" : "How many T20I fifties has Rajkot player Dwayne Smith scored ?",
-            "A" : "c",
-            "options" : {
-                "a" : "2",
-                "b" : "5",
-                "c" : "3",
-                "d" : "6"
-            }
-        }, {
-            "Q" : "Which team will Eklavya Dwivedi represent in IPL 2016 ?",
-            "A" : "b",
-            "options" : {
-                "a" : "Kings XI Punjab",
-                "b" : "Gujarat Lions",
-                "c" : "Rising Pune Supergiants",
-                "d" : "Delhi Daredevils"
             }
         }
     ]
