@@ -6,9 +6,7 @@ const barChart = (props) => {
 
     const options = {
         responsive: true,
-        tooltips: {
-            enabled: false,
-        },
+        tooltips: { enabled: false },
         scales: {
             yAxes: [{
                 ticks: {
@@ -28,6 +26,7 @@ const barChart = (props) => {
             text: 'Result',
             fontSize: 25,
         },
+        legend: { display: false },
         maintainAspectRatio: true
     }
 

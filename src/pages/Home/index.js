@@ -56,7 +56,6 @@ class Home extends Component {
             labels: ['Correct', 'Incorrect'],
             datasets: [
               {
-                label: ["Corect", "Incorrect"],
                 backgroundColor: [
                     'rgba(2, 117, 5, 0.3)',
                     'rgba(255, 0, 0, 0.3)',
